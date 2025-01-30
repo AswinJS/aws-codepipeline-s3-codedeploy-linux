@@ -5,10 +5,10 @@
   <title>Sample Deployment</title>
   <style>
     body {
-      color: #000000; /* Black text */
-      background-color: #E0F7FA; /* Soft cyan background */
+      color: #FFFFFF; /* White text for contrast */
+      background: linear-gradient(to right, #0F2027, #203A43, #2C5364); /* Dark blue gradient */
       font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       margin: 0;
       padding: 0;
     }
@@ -23,8 +23,8 @@
       font-size: 500%;
       font-weight: bold;
       margin-bottom: 20px;
-      color: #00796B; /* Dark teal */
-      border-bottom: 4px solid #00796B;
+      color: #FFD700; /* Gold */
+      border-bottom: 4px solid #FFD700;
       padding-bottom: 10px;
     }
 
@@ -32,50 +32,51 @@
       font-size: 200%;
       font-weight: normal;
       margin-bottom: 30px;
-      color: #333;
+      color: #ADD8E6; /* Light Blue */
     }
 
     .highlight {
-      color: #FF5722; /* Vibrant orange for highlight */
+      color: #00E5FF; /* Bright Cyan */
       font-weight: bold;
       font-size: 1.3em;
     }
 
     .footer {
       margin-top: 40px;
-      border-top: 3px solid #00796B;
+      border-top: 3px solid #C0C0C0; /* Silver */
       padding-top: 20px;
-      color: #00796B;
+      color: #C0C0C0;
     }
 
     .details {
       font-size: 1.4em;
-      color: #333;
+      color: #E3F2FD; /* Light pastel blue */
       margin-bottom: 30px;
-      text-align: left;
+      text-align: justify;
       line-height: 1.6;
     }
 
     p {
       font-size: 1.2em;
-      color: #333;
+      color: #E3F2FD;
     }
 
     .line {
       width: 60%;
       height: 2px;
-      background-color: #00796B;
+      background-color: #FFD700; /* Gold */
       margin: 20px auto;
     }
 
     a {
-      color: #00796B;
+      color: #FF4081; /* Vibrant Pink */
       text-decoration: none;
       font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #FFD700; /* Hover Gold */
     }
   </style>
 </head>
@@ -84,20 +85,18 @@
     <h1>Congratulations!</h1>
     <h2>Pipeline Created Successfully</h2>
     
- <p class="details" style="text-align: justify;">
-  Hello, I am <span class="highlight">ASWIN JAYA SURYA</span>  <span class="highlight">(M017967)</span>, and I have successfully created a pipeline that retrieved the source application from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy. This automated process significantly improves deployment efficiency and reduces errors.
-</p>
+    <p class="details">
+      Hello, I am <span class="highlight">ASWIN JAYA SURYA</span>  <span class="highlight">(M017967)</span>, and I have successfully created a pipeline that retrieved the source application from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy. This automated process significantly improves deployment efficiency and reduces errors.
+    </p>
 
-    
     <div class="line"></div>
 
     <p style="text-align: center; white-space: nowrap;">
-  To learn more, check out the 
-  <span style="color: #FF5722; font-weight: bold;">AWS Elastic Beanstalk Documentation</span> 
-  for next steps.
-</p>
+      To learn more, check out the 
+      <span style="color: #00E5FF; font-weight: bold;">AWS Elastic Beanstalk Documentation</span> 
+      for next steps.
+    </p>
 
-    
     <div class="footer">
       <p>Powered by AWS CodeDeploy</p>
     </div>
