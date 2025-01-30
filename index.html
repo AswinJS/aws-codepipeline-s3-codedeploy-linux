@@ -5,28 +5,98 @@
   <title>Sample Deployment</title>
   <style>
     body {
-      color: #000000; /* Changed to black */
-      background-color: #ADD8E6; /* Changed to light blue */
+      color: #000000; /* Black text */
+      background-color: #E0F7FA; /* Soft cyan background */
       font-family: Arial, sans-serif;
       font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Centered container */
+    .container {
+      text-align: center;
+      padding: 50px;
     }
 
     h1 {
       font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #00796B; /* Dark teal */
+      border-bottom: 4px solid #00796B;
+      padding-bottom: 10px;
     }
 
     h2 {
       font-size: 200%;
       font-weight: normal;
-      margin-bottom: 0;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .highlight {
+      color: #FF5722; /* Vibrant orange for highlight */
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .footer {
+      margin-top: 40px;
+      border-top: 3px solid #00796B;
+      padding-top: 20px;
+      color: #00796B;
+    }
+
+    .details {
+      font-size: 1.4em;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .line {
+      width: 60%;
+      height: 2px;
+      background-color: #00796B;
+      margin: 20px auto;
+    }
+
+    a {
+      color: #00796B;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div align="center">
+  <div class="container">
     <h1>Congratulations!</h1>
-    <h2>I am M017967 ASWIN JS 😍 I have successfully created a pipeline that retrieved this source application from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy.</h2>  <p>For next steps, read the AWS Elastic Beanstalk Documentation.</p> </div>
+    <h2>Pipeline Created Successfully</h2>
+    
+ <p class="details" style="text-align: justify;">
+  Hello, I am <span class="highlight">ASWIN JAYA SURYA</span>  <span class="highlight">(M017967)</span>, and I have successfully created a pipeline that retrieved the source application from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy. This automated process significantly improves deployment efficiency and reduces errors.
+</p>
+
+    
+    <div class="line"></div>
+
+    <p style="text-align: justify;">To learn more, check out the <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html" target="_blank">AWS Elastic Beanstalk Documentation</a> for next steps.</p>
+
+    
+    <div class="footer">
+      <p>Powered by AWS CodeDeploy</p>
+    </div>
+  </div>
 </body>
 </html>
