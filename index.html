@@ -22,10 +22,20 @@
     h1 {
       font-size: 500%;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin: 20px 0;
       color: #FFD700; /* Gold */
-      border-bottom: 4px solid #FFD700;
       padding-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Line Design - Equal Size */
+    .line-design {
+      width: 60%;
+      height: 4px;
+      background-color: #FFD700; /* Gold */
+      margin: 20px auto;
+      border-radius: 2px;
     }
 
     h2 {
@@ -41,13 +51,6 @@
       font-size: 1.3em;
     }
 
-    .footer {
-      margin-top: 40px;
-      border-top: 3px solid #C0C0C0; /* Silver */
-      padding-top: 20px;
-      color: #C0C0C0;
-    }
-
     .details {
       font-size: 1.4em;
       color: #E3F2FD; /* Light pastel blue */
@@ -56,50 +59,28 @@
       line-height: 1.6;
     }
 
-    p {
-      font-size: 1.2em;
-      color: #E3F2FD;
-    }
-
-    .line {
-      width: 60%;
-      height: 2px;
-      background-color: #FFD700; /* Gold */
-      margin: 20px auto;
-    }
-
-    a {
-      color: #FF4081; /* Vibrant Pink */
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #FFD700; /* Hover Gold */
-    }
   </style>
 </head>
 <body>
   <div class="container">
+    
+    <div class="line-design"></div> <!-- Line Above -->
     <h1>Congratulations!</h1>
+    <div class="line-design"></div> <!-- Line Below -->
+
     <h2>Pipeline Created Successfully</h2>
     
     <p class="details">
-      Hello, I am <span class="highlight">ASWIN JAYA SURYA - Jenkins SonarQube Dockers </span>  <span class="highlight">(M017967)</span>, and I have successfully created a pipeline that retrieved the source application from an Amazon S3 bucket and deployed it to three Amazon EC2 instances using AWS CodeDeploy. This automated process significantly improves deployment efficiency and reduces errors.
+      Hello, I am <span class="highlight">ASWIN JAYA SURYA </span>  
+      <span class="highlight">(M017967)</span>, and I have successfully created a 
+      CI/CD pipeline using Jenkins, SonarQube, and Docker. This pipeline automates 
+      the process of building, testing, and deploying applications on Amazon EC2 
+      instances, ensuring a smooth and efficient deployment workflow with enhanced 
+      code quality and security.
     </p>
 
-    <div class="line"></div>
+    <div class="line-design"></div> <!-- Bottom Line -->
 
-    <p style="text-align: center; white-space: nowrap;">
-      To learn more, check out the 
-      <span style="color: #00E5FF; font-weight: bold;">AWS Elastic Beanstalk Documentation</span> 
-      for next steps.
-    </p>
-
-    <div class="footer">
-      <p>Powered by AWS CodeDeploy</p>
-    </div>
   </div>
 </body>
 </html>
