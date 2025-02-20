@@ -19,6 +19,8 @@ FROM nginx:1.25
 
 # Copy the index.html file to the default Nginx web directory
 COPY index.html /usr/share/nginx/html/
+COPY styles.css /usr/share/nginx/html/
+COPY media /usr/share/nginx/html/media
 
 # Expose port 80
 EXPOSE 80
