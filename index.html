@@ -3,115 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Pipeline Architecture</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Deployment Successful</title>
+    <style>
+        /* Background Animation */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Rocket Animation */
+        @keyframes rocketLaunch {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sparkling Stars Animation */
+        @keyframes stars {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+
+        /* Page Styling */
+        body {
+            background: linear-gradient(-45deg, #000428, #004e92, #b21f1f, #ff7300);
+            background-size: 500% 500%;
+            animation: backgroundAnimation 10s ease infinite;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Stars */
+        .stars {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0;
+            animation: stars 3s infinite ease-in-out;
+        }
+
+        .container {
+            max-width: 600px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.3em;
+        }
+
+        p {
+            font-size: 1.4em;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #FFD700; /* Gold */
+            font-weight: bold;
+        }
+
+        /* Rocket Pop-up & Movement */
+        .rocket {
+            display: inline-block;
+            font-size: 3.5em;
+            margin-top: 30px;
+            animation: rocketLaunch 2s linear infinite;
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <img src="media/logo.png" alt="AJS Logo" class="logo">
-            <div class="header-text">
-                <h1>4-Stage CI/CD Pipeline Architecture</h1>
-                <div class="author-byline">
-                    <a href="https://www.linkedin.com/in/aswinjs" target="_blank" class="author-link">
-                        Aswin Jaya Surya
-                    </a>
-                    <span class="read-time">• 4 mins read</span>
-                </div>
-            </div>
-        </div>
-    </header>
+
+    <!-- Twinkling Stars -->
+    <div class="stars" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="stars" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
+    <div class="stars" style="top: 50%; left: 40%; animation-delay: 2s;"></div>
+    <div class="stars" style="top: 80%; left: 20%; animation-delay: 3s;"></div>
+    <div class="stars" style="top: 65%; left: 85%; animation-delay: 1.5s;"></div>
 
     <div class="container">
-        <section class="overview" id="overview">
-            <h2>Overview</h2>
-            <p>This 4-stage CI/CD pipeline automates the process of building, testing, analyzing, and deploying applications using Jenkins, GitHub, SonarQube, Docker, & AWS EC2. The pipeline ensures efficient code integration, quality checks, and reliable deployment to end users.</p>
-        </section>
-
-        <section class="architecture" id="architecture">
-            <h2>Architecture Diagram</h2>
-            <div class="diagram-container">
-                <img src="media/image1.png" alt="CI/CD Architecture Diagram">
-            </div>
-        </section>
-
-        <section class="stages" id="stages">
-            <h2>Pipeline Stages & Workflow</h2>
-            <div class="stage">
-                <h3>Stage 1: Source Code Management (GitHub)</h3>
-                <p><strong>Purpose:</strong> Store and manage code changes.</p>
-                <ol>
-                    <li>Developers push code to a GitHub repository</li>
-                    <li>GitHub webhook automatically triggers Jenkins</li>
-                </ol>
-            </div>
-
-            <div class="stage">
-                <h3>Stage 2: Continuous Integration (Jenkins)</h3>
-                <p><strong>Purpose:</strong> Automate build and test processes.</p>
-                <ol>
-                    <li>Jenkins pulls latest code from GitHub</li>
-                    <li>Executes build script and runs unit tests</li>
-                </ol>
-            </div>
-
-            <div class="stage">
-                <h3>Stage 3: Code Quality Analysis (SonarQube)</h3>
-                <p><strong>Purpose:</strong> Ensure code quality and security.</p>
-                <ol>
-                    <li>SonarQube scans code for vulnerabilities</li>
-                    <li>Generates detailed quality report</li>
-                </ol>
-            </div>
-
-            <div class="stage">
-                <h3>Stage 4: Deployment (Docker & AWS EC2)</h3>
-                <p><strong>Purpose:</strong> Containerized deployment to cloud.</p>
-                <ol>
-                    <li>Build Docker image and push to registry</li>
-                    <li>Deploy container to EC2 instance via SSH</li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="tech-stack" id="tech-stack">
-            <h2>Technology Stack</h2>
-            <ul class="tech-grid">
-                <li><i class="fab fa-github"></i> GitHub</li>
-                <li><i class="fab fa-jenkins"></i> Jenkins</li>
-                <li><i class="fas fa-chart-line"></i> SonarQube</li>
-                <li><i class="fab fa-docker"></i> Docker</li>
-                <li><i class="fab fa-aws"></i> AWS EC2</li>
-                <li><i class="fas fa-server"></i> Nginx</li>
-            </ul>
-        </section>
-
-        <section class="benefits" id="benefits">
-            <h2>Key Benefits</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Automation</h3>
-                    <p>Reduces manual errors and speeds up delivery process</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Quality Assurance</h3>
-                    <p>SonarQube ensures clean, secure code standards</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-cube"></i>
-                    <h3>Consistency</h3>
-                    <p>Docker containers provide identical environments</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-expand"></i>
-                    <h3>Scalability</h3>
-                    <p>EC2 allows easy scaling of infrastructure</p>
-                </div>
-            </div>
-        </section>
+        <h1>Deployment Successful</h1>
+        <p>
+            Hey there! I am <span class="highlight">Aswin Jaya Surya</span>, and I just successfully deployed this application! ✨<br> 
+            The CI/CD pipeline is now fully automated — pulling code, building, testing, and deploying flawlessly! 🔥 <br> 
+            
+        </p>
+        <div class="rocket">🚀</div>
     </div>
+
 </body>
 </html>
